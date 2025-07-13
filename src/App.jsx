@@ -47,7 +47,7 @@ const WeatherApp = () => {
       setError('');
       try {
         const q = encodeURIComponent(city);
-        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${APIKEY}&q=${q}&aqi=yes`);
+        const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${APIKEY}&q=${q}&aqi=yes`);
         if (!response.ok) {
           throw new Error(`Network error(Status:${response.status})`);
         }
